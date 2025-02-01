@@ -1,10 +1,10 @@
-import {Text, View, Image, TouchableOpacity, ScrollView} from 'react-native'
+import { Text, View, Image, TouchableOpacity, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import images from '@/constants/images'
 import icons from '@/constants/icons'
 import Search from '@/components/Search'
-import {FeaturedCard, Card} from "@/components/Cards";
-import Filters from "@/components/Filteres";
+import { FeaturedCard, Card } from '@/components/Cards'
+import Filters from '@/components/Filteres'
 
 export default function Index() {
   return (
@@ -25,40 +25,54 @@ export default function Index() {
           <Image source={icons.bell} className='size-6' />
         </View>
         <Search />
-        <View className="my-5">
-          <View className="flex flex-row items-center justify-between">
-            <Text className="text-xl font-rubik-bold
+        <View className='my-5'>
+          <View className='flex flex-row items-center justify-between'>
+            <Text
+              className='text-xl font-rubik-bold
           text-black-300
-          ">Featured</Text>
+          '
+            >
+              Featured
+            </Text>
             <TouchableOpacity>
-              <Text className="text-base font-rubik-bold
+              <Text
+                className='text-base font-rubik-bold
             text-primary-300
-            ">See All</Text>
+            '
+              >
+                See All
+              </Text>
             </TouchableOpacity>
           </View>
-          <View className="flex flex-row gap-5 mt-5">
-
-              <FeaturedCard />
-              <FeaturedCard />
+          <View className='flex flex-row gap-5 mt-5'>
+            <FeaturedCard />
+            <FeaturedCard />
           </View>
         </View>
-        <View className="flex flex-row items-center justify-between">
-          <Text className="text-xl font-rubik-bold
+        <View className='flex flex-row items-center justify-between'>
+          <Text
+            className='text-xl font-rubik-bold
           text-black-300
-          ">Our Recommendation</Text>
+          '
+          >
+            Our Recommendation
+          </Text>
           <TouchableOpacity>
-            <Text className="text-base font-rubik-bold
+            <Text
+              className='text-base font-rubik-bold
             text-primary-300
-            ">See All</Text>
+            '
+            >
+              See All
+            </Text>
           </TouchableOpacity>
         </View>
         {/*<View className="flex flex-row fap-5 mt-5">*/}
         {/*  <Card/>*/}
         {/*  <Card/>*/}
         {/*</View>*/}
-        <Filters/>
+        <Filters />
       </View>
-
     </SafeAreaView>
   )
 }
