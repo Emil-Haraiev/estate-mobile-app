@@ -1,5 +1,5 @@
 import * as Linking from 'expo-linking'
-import { Account, Avatars, Client } from 'react-native-appwrite'
+import {Account, Avatars, Client, Databases} from 'react-native-appwrite'
 import { OAuthProvider } from 'react-native-appwrite'
 import { openAuthSessionAsync } from 'expo-web-browser'
 
@@ -7,6 +7,11 @@ export const config = {
   platform: 'com.restate',
   endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT,
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID,
+  databaseId: process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID,
+  galleriesCollectionId: process.env.EXPO_PUBLIC_APPWRITE_GALLERIES_COLLECTIONS_ID,
+  reviewsCollectionId: process.env.EXPO_PUBLIC_APPWRITE_REVIEWS_COLLECTIONS_ID,
+  agentsCollectionId: process.env.EXPO_PUBLIC_APPWRITE_AGENT_COLLECTIONS_ID,
+  propertiesCollectionId: process.env.EXPO_PUBLIC_APPWRITE_PROPERTIES_COLLECTIONS_ID,
 }
 
 export const client = new Client()
@@ -18,6 +23,7 @@ client
 
 export const avatar = new Avatars(client)
 export const account = new Account(client)
+export const databases = new Databases(client)
 
 export async function login() {
   try {
