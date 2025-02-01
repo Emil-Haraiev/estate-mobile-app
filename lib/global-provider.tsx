@@ -8,7 +8,7 @@ interface GlobalContextType {
   isLogged: boolean
   user: User | null
   loading: boolean
-  refetch: (newParams?: Record<string, string | number>) => Promise<void>
+  refetch: () => void
 }
 
 interface User {
