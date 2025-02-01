@@ -5,6 +5,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import images from '@/constants/images'
@@ -15,6 +16,7 @@ import { FeaturedCard, Card } from '@/components/Cards'
 import Filters from '@/components/Filters'
 import NoResults from '@/components/NoResult'
 import {useGlobalContext} from "@/lib/global-provider";
+import seed from "@/lib/ceed";
 
 const handleCardPress = (id: string) => router.push(`/properties/${id}`)
 export default function Index() {
@@ -78,7 +80,7 @@ export default function Index() {
                 </TouchableOpacity>
               </View>
               <FlatList
-                  data={[1,2,3]}
+                  data={[5,6,7]}
                   renderItem={({ item }) => (
                       <FeaturedCard
                           item={item}
